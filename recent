@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 2.2.8.
+# Recent settings file for Wireshark 2.4.4.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -67,7 +67,7 @@ gui.geometry_main_lower_pane: 177
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
-column.width: %m, 84:L, %t, 122:L, %rs, 178, %rhs, 164, %ud, 164, %rS, 98, %rD, 138, %p, 74, %Cus:tcp.time_delta, 134:C, %Cus:tcp.stream, 106, %i, 869, %Cus:ip.len, 130, %L, 122, %Cus:tcp.analysis.bytes_in_flight, 162:L, %Tt, 348:L, %Cus:text, 166, %Cus:tcp.seq, 130
+column.width: %m, 84:L, %t, 122:L, %rs, 178, %rhs, 164, %ud, 164, %rS, 98, %rD, 138, %p, 74, "%Cus:tcp.time_delta", 134:C, "%Cus:tcp.stream", 106, %i, 869, "%Cus:ip.len", 130, %L, 122, "%Cus:tcp.analysis.bytes_in_flight", 162:L, %Tt, 348:L, "%Cus:text", 166, "%Cus:tcp.seq", 130
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
@@ -79,11 +79,18 @@ gui.conversation_tabs:
 # Open endpoint dialog tabs.
 # List of endpoint names, e.g. "TCP", "IPv6".
 gui.endpoint_tabs: 
-	""
 
 # For RLC stats, whether to use RLC PDUs found inside MAC frames.
 # TRUE or FALSE (case-insensitive).
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/erwin/Cases/HDS04588347/
+gui.fileopen_remembered_dir: /home/erwin/Cases/00212368/
+
+# Additional Toolbars shown
+# List of additional toolbars to show.
+gui.additional_toolbar_show: 
+
+# Interface Toolbars show.
+# List of interface toolbars to show.
+gui.interface_toolbar_show: 

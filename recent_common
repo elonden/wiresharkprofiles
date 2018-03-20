@@ -1,20 +1,20 @@
-# Recent settings file for Wireshark 2.2.8.
+# Recent settings file for Wireshark 2.4.4.
 #
 # This file is regenerated each time Wireshark is quit.
 # So be careful, if you want to make manual changes here.
 
 ######## Recent capture files (latest last), cannot be altered through command line ########
 
-recent.capture_file: /home/erwin/Cases/HDS04355597/nfsmount.20170914.1453.pcap
-recent.capture_file: /home/erwin/Cases/HDS04355597/good_backup.20170914.1453.pcap
 recent.capture_file: /home/erwin/Cases/HDS04355597/durringbackup.20170914.1453.pcap
-recent.capture_file: /home/erwin/Cases/HDS04588347/20171107070245_dump.20171106.2307
-recent.capture_file: /home/erwin/Cases/HDS04588347/nfs_adidas_trace_han1115_5.20171106.2307.dump
-recent.capture_file: /tmp/mozilla_erwin0/stp.pcap
-recent.capture_file: /home/erwin/kanweg/server-capture.cap
-recent.capture_file: /home/erwin/Cases/HDS04588347/nfs_adidas_trace_han1115_6.20171107.0036.dump
-recent.capture_file: /home/erwin/Cases/HDS04588347/han1107.20171108.0236/20171107202744_dump
-recent.capture_file: /home/erwin/Cases/HDS04588347/nfs_adidas_trace_20171107215155.20171108.0236
+recent.capture_file: /home/erwin/Cases/HDS04355597/good_backup.20170914.1453.pcap
+recent.capture_file: /home/erwin/igen-tcpdump-out.pcap
+recent.capture_file: /home/erwin/Cases/00161003/localdwnld.20180220.2026/localdwnld.pcapng
+recent.capture_file: /home/erwin/Cases/00161003/internetdwnld.20180220.2039/internetdwnld.pcapng
+recent.capture_file: /home/erwin/Cases/00212368/ase.20180305.1622.pcap
+recent.capture_file: /home/erwin/elo.net
+recent.capture_file: /home/erwin/Cases/00226105/tcpdump.pcap
+recent.capture_file: /home/erwin/Cases/00229705/tcpdump.20180315.0316.pcap
+recent.capture_file: /home/erwin/Cases/00200804/ho-pltm-1016336-fss-1203-14.20180312.1719/ho-pltm-1016336-fss-1203-14.pcap
 
 ######## Recent capture filters (latest last), cannot be altered through command line ########
 
@@ -51,28 +51,29 @@ recent.capture_filter.vnet100: ip.src == 192.168.3.5
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
-recent.display_filter: tcp.flags.syn == 1
-recent.display_filter: tcp.time_delta > 0.5
-recent.display_filter: nfs
-recent.display_filter: tcp.flags.syn == 1 && tcp.flags.ack == 1
-recent.display_filter: tcp.analysis.flags && !tcp.analysis.window_update
-recent.display_filter: tcp.stream == 2
-recent.display_filter: !icmp
-recent.display_filter: frame.len > 1518
-recent.display_filter: frame.len > 1501
+recent.display_filter: ip.addr == 185.90.114.21 && ip.proto != 1
+recent.display_filter: ip.addr == 185.90.114.21 && ip.proto > 1
+recent.display_filter: ip.addr == 185.90.114.21 && ip.proto < 1
+recent.display_filter: ip.addr == 185.90.114.21
+recent.display_filter: ip.addr == 10.18.4.11
+recent.display_filter: ip.src == 10.18.4.11
+recent.display_filter: ip.addr eq 192.168.19.34
+recent.display_filter: ip.addr eq 10.18.4.11 and ip.addr eq 10.18.12.20
+recent.display_filter: tcp.stream == 839
+recent.display_filter: (tcp.flags.fin == 1 || tcp.flags.reset == 1) && tcp.stream == 839
 
 # Main window geometry.
 # Decimal numbers.
 gui.geometry_main_x: 0
-gui.geometry_main_y: 28
-gui.gtk.geometry_main_x: 147
-gui.gtk.geometry_main_y: 377
-gui.geometry_main_width: 2289
-gui.geometry_main_height: 903
+gui.geometry_main_y: 27
+gui.gtk.geometry_main_x: 0
+gui.gtk.geometry_main_y: 27
+gui.geometry_main_width: 2560
+gui.geometry_main_height: 983
 
 # Main window maximized.
 # TRUE or FALSE (case-insensitive).
-gui.geometry_main_maximized: FALSE
+gui.geometry_main_maximized: TRUE
 
 # Statusbar left pane size.
 # Decimal number.
@@ -80,10 +81,10 @@ gui.geometry_status_pane: 601
 
 # Statusbar middle pane size.
 # Decimal number.
-gui.geometry_status_pane_right: 37
+gui.geometry_status_pane_right: 178
 
 # Last used Configuration Profile.
-gui.last_used_profile: NFS
+gui.last_used_profile: Erwin
 
 # WLAN statistics upper pane size.
 # Decimal number.
@@ -97,14 +98,14 @@ privs.warn_if_elevated: TRUE
 # TRUE or FALSE (case-insensitive).
 privs.warn_if_no_npf: TRUE
 
-# Geometry and maximized state of plen window.
+# Geometry and maximized state of http window.
 # Decimal integers.
-gui.geom.plen.x: 870
-gui.geom.plen.y: 248
-gui.geom.plen.width: 800
-gui.geom.plen.height: 459
+gui.geom.http.x: 312
+gui.geom.http.y: 118
+gui.geom.http.width: 1633
+gui.geom.http.height: 646
 # TRUE or FALSE (case-insensitive).
-gui.geom.plen.maximized: FALSE
+gui.geom.http.maximized: FALSE
 
 # Geometry and maximized state of ExpertInfoDialog window.
 # Decimal integers.
@@ -115,14 +116,23 @@ gui.geom.ExpertInfoDialog.height: 812
 # TRUE or FALSE (case-insensitive).
 gui.geom.ExpertInfoDialog.maximized: FALSE
 
-# Geometry and maximized state of ServiceResponseTimeDialog window.
+# Geometry and maximized state of FollowStreamDialog window.
 # Decimal integers.
-gui.geom.ServiceResponseTimeDialog.x: 977
-gui.geom.ServiceResponseTimeDialog.y: 246
-gui.geom.ServiceResponseTimeDialog.width: 587
-gui.geom.ServiceResponseTimeDialog.height: 459
+gui.geom.FollowStreamDialog.x: 417
+gui.geom.FollowStreamDialog.y: 28
+gui.geom.FollowStreamDialog.width: 1706
+gui.geom.FollowStreamDialog.height: 982
 # TRUE or FALSE (case-insensitive).
-gui.geom.ServiceResponseTimeDialog.maximized: FALSE
+gui.geom.FollowStreamDialog.maximized: FALSE
+
+# Geometry and maximized state of plen window.
+# Decimal integers.
+gui.geom.plen.x: 870
+gui.geom.plen.y: 248
+gui.geom.plen.width: 800
+gui.geom.plen.height: 459
+# TRUE or FALSE (case-insensitive).
+gui.geom.plen.maximized: FALSE
 
 # Geometry and maximized state of Packet Lengths Stats Tree window.
 # Decimal integers.
@@ -132,6 +142,15 @@ gui.geom.Packet Lengths Stats Tree.width: 1251
 gui.geom.Packet Lengths Stats Tree.height: 603
 # TRUE or FALSE (case-insensitive).
 gui.geom.Packet Lengths Stats Tree.maximized: FALSE
+
+# Geometry and maximized state of ServiceResponseTimeDialog window.
+# Decimal integers.
+gui.geom.ServiceResponseTimeDialog.x: 977
+gui.geom.ServiceResponseTimeDialog.y: 246
+gui.geom.ServiceResponseTimeDialog.width: 587
+gui.geom.ServiceResponseTimeDialog.height: 459
+# TRUE or FALSE (case-insensitive).
+gui.geom.ServiceResponseTimeDialog.maximized: FALSE
 
 # Geometry and maximized state of PacketDialog window.
 # Decimal integers.
@@ -145,7 +164,7 @@ gui.geom.PacketDialog.maximized: FALSE
 # Geometry and maximized state of ColoringRulesDialog window.
 # Decimal integers.
 gui.geom.ColoringRulesDialog.x: 758
-gui.geom.ColoringRulesDialog.y: 197
+gui.geom.ColoringRulesDialog.y: 122
 gui.geom.ColoringRulesDialog.width: 1044
 gui.geom.ColoringRulesDialog.height: 649
 # TRUE or FALSE (case-insensitive).
@@ -169,6 +188,15 @@ gui.geom.PreferencesDialog.height: 540
 # TRUE or FALSE (case-insensitive).
 gui.geom.PreferencesDialog.maximized: FALSE
 
+# Geometry and maximized state of http_srv window.
+# Decimal integers.
+gui.geom.http_srv.x: 366
+gui.geom.http_srv.y: 147
+gui.geom.http_srv.width: 1596
+gui.geom.http_srv.height: 688
+# TRUE or FALSE (case-insensitive).
+gui.geom.http_srv.maximized: FALSE
+
 # Geometry and maximized state of DecodeAsDialog window.
 # Decimal integers.
 gui.geom.DecodeAsDialog.x: 895
@@ -186,6 +214,15 @@ gui.geom.CompiledFilterOutput.width: 654
 gui.geom.CompiledFilterOutput.height: 380
 # TRUE or FALSE (case-insensitive).
 gui.geom.CompiledFilterOutput.maximized: FALSE
+
+# Geometry and maximized state of SMB2 SRT Statistics window.
+# Decimal integers.
+gui.geom.SMB2 SRT Statistics.x: 872
+gui.geom.SMB2 SRT Statistics.y: 458
+gui.geom.SMB2 SRT Statistics.width: 300
+gui.geom.SMB2 SRT Statistics.height: 98
+# TRUE or FALSE (case-insensitive).
+gui.geom.SMB2 SRT Statistics.maximized: FALSE
 
 # Geometry and maximized state of SequenceDialog window.
 # Decimal integers.
