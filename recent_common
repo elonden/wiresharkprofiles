@@ -1,20 +1,20 @@
-# Recent settings file for Wireshark 2.4.4.
+# Recent settings file for Wireshark 2.6.2.
 #
 # This file is regenerated each time Wireshark is quit.
 # So be careful, if you want to make manual changes here.
 
 ######## Recent capture files (latest last), cannot be altered through command line ########
 
-recent.capture_file: /home/erwin/Cases/HDS04355597/durringbackup.20170914.1453.pcap
-recent.capture_file: /home/erwin/Cases/HDS04355597/good_backup.20170914.1453.pcap
-recent.capture_file: /home/erwin/igen-tcpdump-out.pcap
-recent.capture_file: /home/erwin/Cases/00161003/localdwnld.20180220.2026/localdwnld.pcapng
-recent.capture_file: /home/erwin/Cases/00161003/internetdwnld.20180220.2039/internetdwnld.pcapng
-recent.capture_file: /home/erwin/Cases/00212368/ase.20180305.1622.pcap
+recent.capture_file: /home/erwin/Cases/00151803/pcaps.20180730.1922/2018-07-31-1123-node1.pcap
+recent.capture_file: /home/erwin/Cases/00151803/pcaps.20180730.1922/2018-07-31-1122-2-node1.pcap
+recent.capture_file: /home/erwin/Cases/00151803/pcaps.20180730.1922/2018-07-31-1122-node1.pcap
+recent.capture_file: /home/erwin/Cases/00151803/pcaps.20180730.1922/2018-07-31-1121-node1.pcap
+recent.capture_file: /home/erwin/Cases/00151803/pcaps.20180730.1922/2018-07-31-1140-node1.pcap
+recent.capture_file: /home/erwin/xxxx.pcap
+recent.capture_file: /home/erwin/Cases/00151803/20181213-1137-1140_120sec_180sec.20181213.1334.cap
+recent.capture_file: /home/erwin/Cases/00151803/20181213-1137-1140_60sec-120sec.20181213.1334.cap
+recent.capture_file: /home/erwin/Cases/00151803/20181213-1110-1118_420sec-480sec.20181213.1237.cap
 recent.capture_file: /home/erwin/elo.net
-recent.capture_file: /home/erwin/Cases/00226105/tcpdump.pcap
-recent.capture_file: /home/erwin/Cases/00229705/tcpdump.20180315.0316.pcap
-recent.capture_file: /home/erwin/Cases/00200804/ho-pltm-1016336-fss-1203-14.20180312.1719/ho-pltm-1016336-fss-1203-14.pcap
 
 ######## Recent capture filters (latest last), cannot be altered through command line ########
 
@@ -51,16 +51,16 @@ recent.capture_filter.vnet100: ip.src == 192.168.3.5
 
 ######## Recent display filters (latest last), cannot be altered through command line ########
 
-recent.display_filter: ip.addr == 185.90.114.21 && ip.proto != 1
-recent.display_filter: ip.addr == 185.90.114.21 && ip.proto > 1
-recent.display_filter: ip.addr == 185.90.114.21 && ip.proto < 1
-recent.display_filter: ip.addr == 185.90.114.21
-recent.display_filter: ip.addr == 10.18.4.11
-recent.display_filter: ip.src == 10.18.4.11
-recent.display_filter: ip.addr eq 192.168.19.34
-recent.display_filter: ip.addr eq 10.18.4.11 and ip.addr eq 10.18.12.20
-recent.display_filter: tcp.stream == 839
-recent.display_filter: (tcp.flags.fin == 1 || tcp.flags.reset == 1) && tcp.stream == 839
+recent.display_filter: tcp.analysis.flags && !tcp.analysis.window_update
+recent.display_filter: tcp.stream == 9
+recent.display_filter: icap && !http.response.code == 200
+recent.display_filter: icap
+recent.display_filter: http && http.response.code == 400
+recent.display_filter: http && http.response.code != 200
+recent.display_filter: http && !http.response.code > 200
+recent.display_filter: http && !http.response.code == 200
+recent.display_filter: http.response.code == 200
+recent.display_filter: http
 
 # Main window geometry.
 # Decimal numbers.
@@ -84,7 +84,7 @@ gui.geometry_status_pane: 601
 gui.geometry_status_pane_right: 178
 
 # Last used Configuration Profile.
-gui.last_used_profile: Erwin
+gui.last_used_profile: TCP Default
 
 # WLAN statistics upper pane size.
 # Decimal number.
@@ -134,14 +134,14 @@ gui.geom.plen.height: 459
 # TRUE or FALSE (case-insensitive).
 gui.geom.plen.maximized: FALSE
 
-# Geometry and maximized state of Packet Lengths Stats Tree window.
+# Geometry and maximized state of VoipCallsDialog window.
 # Decimal integers.
-gui.geom.Packet Lengths Stats Tree.x: 75
-gui.geom.Packet Lengths Stats Tree.y: 100
-gui.geom.Packet Lengths Stats Tree.width: 1251
-gui.geom.Packet Lengths Stats Tree.height: 603
+gui.geom.VoipCallsDialog.x: 137
+gui.geom.VoipCallsDialog.y: 144
+gui.geom.VoipCallsDialog.width: 1381
+gui.geom.VoipCallsDialog.height: 512
 # TRUE or FALSE (case-insensitive).
-gui.geom.Packet Lengths Stats Tree.maximized: FALSE
+gui.geom.VoipCallsDialog.maximized: FALSE
 
 # Geometry and maximized state of ServiceResponseTimeDialog window.
 # Decimal integers.
@@ -152,19 +152,19 @@ gui.geom.ServiceResponseTimeDialog.height: 459
 # TRUE or FALSE (case-insensitive).
 gui.geom.ServiceResponseTimeDialog.maximized: FALSE
 
-# Geometry and maximized state of PacketDialog window.
+# Geometry and maximized state of Packet Lengths Stats Tree window.
 # Decimal integers.
-gui.geom.PacketDialog.x: 246
-gui.geom.PacketDialog.y: 68
-gui.geom.PacketDialog.width: 2048
-gui.geom.PacketDialog.height: 814
+gui.geom.Packet Lengths Stats Tree.x: 75
+gui.geom.Packet Lengths Stats Tree.y: 100
+gui.geom.Packet Lengths Stats Tree.width: 1251
+gui.geom.Packet Lengths Stats Tree.height: 603
 # TRUE or FALSE (case-insensitive).
-gui.geom.PacketDialog.maximized: FALSE
+gui.geom.Packet Lengths Stats Tree.maximized: FALSE
 
 # Geometry and maximized state of ColoringRulesDialog window.
 # Decimal integers.
 gui.geom.ColoringRulesDialog.x: 758
-gui.geom.ColoringRulesDialog.y: 122
+gui.geom.ColoringRulesDialog.y: 160
 gui.geom.ColoringRulesDialog.width: 1044
 gui.geom.ColoringRulesDialog.height: 649
 # TRUE or FALSE (case-insensitive).
@@ -188,14 +188,14 @@ gui.geom.PreferencesDialog.height: 540
 # TRUE or FALSE (case-insensitive).
 gui.geom.PreferencesDialog.maximized: FALSE
 
-# Geometry and maximized state of http_srv window.
+# Geometry and maximized state of http_seq window.
 # Decimal integers.
-gui.geom.http_srv.x: 366
-gui.geom.http_srv.y: 147
-gui.geom.http_srv.width: 1596
-gui.geom.http_srv.height: 688
+gui.geom.http_seq.x: 870
+gui.geom.http_seq.y: 231
+gui.geom.http_seq.width: 800
+gui.geom.http_seq.height: 459
 # TRUE or FALSE (case-insensitive).
-gui.geom.http_srv.maximized: FALSE
+gui.geom.http_seq.maximized: FALSE
 
 # Geometry and maximized state of DecodeAsDialog window.
 # Decimal integers.
@@ -205,6 +205,24 @@ gui.geom.DecodeAsDialog.width: 750
 gui.geom.DecodeAsDialog.height: 460
 # TRUE or FALSE (case-insensitive).
 gui.geom.DecodeAsDialog.maximized: FALSE
+
+# Geometry and maximized state of http_srv window.
+# Decimal integers.
+gui.geom.http_srv.x: 366
+gui.geom.http_srv.y: 147
+gui.geom.http_srv.width: 1596
+gui.geom.http_srv.height: 688
+# TRUE or FALSE (case-insensitive).
+gui.geom.http_srv.maximized: FALSE
+
+# Geometry and maximized state of PacketDialog window.
+# Decimal integers.
+gui.geom.PacketDialog.x: 246
+gui.geom.PacketDialog.y: 68
+gui.geom.PacketDialog.width: 2048
+gui.geom.PacketDialog.height: 814
+# TRUE or FALSE (case-insensitive).
+gui.geom.PacketDialog.maximized: FALSE
 
 # Geometry and maximized state of CompiledFilterOutput window.
 # Decimal integers.
@@ -232,6 +250,15 @@ gui.geom.SequenceDialog.width: 2195
 gui.geom.SequenceDialog.height: 947
 # TRUE or FALSE (case-insensitive).
 gui.geom.SequenceDialog.maximized: FALSE
+
+# Geometry and maximized state of TCPStreamDialog window.
+# Decimal integers.
+gui.geom.TCPStreamDialog.x: 427
+gui.geom.TCPStreamDialog.y: 128
+gui.geom.TCPStreamDialog.width: 1706
+gui.geom.TCPStreamDialog.height: 786
+# TRUE or FALSE (case-insensitive).
+gui.geom.TCPStreamDialog.maximized: FALSE
 
 # Geometry and maximized state of TrafficTableDialog window.
 # Decimal integers.
@@ -277,6 +304,15 @@ gui.geom.FilterDialog.width: 1706
 gui.geom.FilterDialog.height: 678
 # TRUE or FALSE (case-insensitive).
 gui.geom.FilterDialog.maximized: FALSE
+
+# Geometry and maximized state of DisplayFilterExpressionDialog window.
+# Decimal integers.
+gui.geom.DisplayFilterExpressionDialog.x: 417
+gui.geom.DisplayFilterExpressionDialog.y: 27
+gui.geom.DisplayFilterExpressionDialog.width: 1706
+gui.geom.DisplayFilterExpressionDialog.height: 983
+# TRUE or FALSE (case-insensitive).
+gui.geom.DisplayFilterExpressionDialog.maximized: FALSE
 
 # Custom colors.
 # List of custom colors selected in Qt color picker.
