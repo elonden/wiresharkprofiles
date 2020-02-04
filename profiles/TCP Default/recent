@@ -1,4 +1,4 @@
-# Recent settings file for Wireshark 2.6.2.
+# Recent settings file for Wireshark 3.2.0.
 #
 # This file is regenerated each time Wireshark is quit
 # and when changing configuration profile.
@@ -71,7 +71,31 @@ gui.geometry_main_lower_pane: 223
 
 # Packet list column pixel widths.
 # Each pair of strings consists of a column format and its pixel width.
-column.width: %m, 84:L, %Tt, 131:L, %t, 90:L, %rs, 178, %rhs, 164, %ud, 164, %rS, 98, %rD, 138, %p, 74, "%Cus:tcp.time_delta", 134:C, "%Cus:tcp.stream", 106, %B, 74, "%Cus:ip.len", 130, %L, 122, "%Cus:tcp.analysis.bytes_in_flight", 162:L, %Tt, 131:L, "%Cus:text", 166, "%Cus:tcp.seq", 130, "%Cus:tcp.flags.syn", 90, "%Cus:tcp.flags.ack", 122, "%Cus:tcp.flags.push", 90, "%Cus:tcp.window_size_value", 50, "%Cus:tcp.analysis.acks_frame", 90, %i, 869
+column.width:
+        %m, 84:L,
+        %Tt, 131:L,
+        %t, 90:L,
+        %rs, 178,
+        %rhs, 164,
+        %ud, 164,
+        %rS, 98,
+        %rD, 138,
+        %p, 74,
+        "%Cus:tcp.time_delta", 134:C,
+        "%Cus:tcp.stream", 106,
+        %B, 74,
+        "%Cus:ip.len", 130,
+        %L, 122,
+        "%Cus:tcp.analysis.bytes_in_flight", 162:L,
+        %Tt, 131:L,
+        "%Cus:text", 166,
+        "%Cus:tcp.seq", 130,
+        "%Cus:tcp.flags.syn", 90,
+        "%Cus:tcp.flags.ack", 122,
+        "%Cus:tcp.flags.push", 90,
+        "%Cus:tcp.window_size_value", 50,
+        "%Cus:tcp.analysis.acks_frame", 90,
+        %i, 869
 
 # Open conversation dialog tabs.
 # List of conversation names, e.g. "TCP", "IPv6".
@@ -89,7 +113,7 @@ gui.endpoint_tabs:
 gui.rlc_pdus_from_mac_frames: FALSE
 
 # Last directory navigated to in File Open dialog.
-gui.fileopen_remembered_dir: /home/erwin/
+gui.fileopen_remembered_dir: /home/erwin/Cases/01756057/02557252-2.20200128.0730/tmp/nfs-data-02557252-12393/
 
 # Additional Toolbars shown
 # List of additional toolbars to show.
